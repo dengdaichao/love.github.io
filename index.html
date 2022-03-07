@@ -27,14 +27,17 @@
       .love-img {
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center 70%;
-        /* background-clip: ; */
+        background-position: center;
       }
     </style>
   </head>
   <body onload="Demo()">
     <h1 id="h1"></h1>
     <canvas></canvas>
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+<script>
+  eruda.init();
+</script>
     <script>
       var MAX = 5
       var i = 0
@@ -328,7 +331,6 @@
       v *= POW[i];
 
       v = ((v * 1e4) >> 0) / 1e4;
-      console.log(STD)
       this.arrFlt[i].opacity = STD ? v : v * 100;
     }
   };
@@ -435,7 +437,7 @@
       requestAnimationFrame(render)
       starttime()
       function starttime() {
-        time(h1, '2021.11.10') // 在一起的时间
+        time(h1, '2021-11-10') // 在一起的时间
         ptimer = setTimeout(starttime, 1000) // 添加计时器
       }
 
